@@ -1,4 +1,4 @@
-#puppeteer-example-on-serverless-lambda
+# puppeteer-example-on-serverless-lambda
 
 ## Check or Setup aws configure 
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
