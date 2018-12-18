@@ -13,11 +13,13 @@ $ cd puppeteer-example-on-serverless-lambda.git
 $ npm install # Or yarn install
 ```
 
-## Scripts Command
+## Command List
 ``` bash
-
 # deploy all functions to aws lambda 
 $ npm run deploy-all
+
+# deploy a specific function on aws lambda 
+$ npm run deploy -- puppeteer
 
 # invoke a specific function on aws lambda 
 $ npm run invoke -- puppeteer
