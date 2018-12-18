@@ -1,0 +1,25 @@
+service: puppeteer  
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: ap-northeast-1
+  stage: test
+
+
+functions:
+  puppeteer:
+    description: handler
+    memorySize: 1536
+    timeout: 30
+    handler: index.handler
+    events:
+      - http:
+          path: puppeteer
+          method: get
+resources:
+  Resources:
+    ApiGatewayRestApi:
+      Properties:
+        BinaryMediaTypes:
+          - "*/*"
