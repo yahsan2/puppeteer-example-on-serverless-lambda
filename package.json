@@ -10,7 +10,7 @@
     "deploy": "serverless deploy -f",
     "deploy-all": "serverless deploy -v",
     "invoke": "serverless invoke -f",
-    "local": "serverless local invoke -f",
+    "local": "serverless invoke local -f",
     "info": "serverless info"
   },
   "keywords": [],
