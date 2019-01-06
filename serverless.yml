@@ -8,15 +8,16 @@ provider:
 
 
 functions:
-  puppeteer:
+  screenshot:
     description: handler
     memorySize: 1536
     timeout: 30
     handler: index.handler
     events:
       - http:
-          path: puppeteer
+          path: "{path+}"
           method: get
+
 resources:
   Resources:
     ApiGatewayRestApi:

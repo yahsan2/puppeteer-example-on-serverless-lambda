@@ -3,12 +3,17 @@ const CDP = require('chrome-remote-interface');
 const puppeteer = require('puppeteer');
 
 exports.handler = async (event, context, callback) => {
-    const {
-        url = 'https://poiit.me',
-        mobile = false,
-      } = event.queryStringParameters || {}
     
-    let slsChrome = null;
+    const {
+        w = 1200,
+        h = 630,
+        mobile = false
+      } = event.queryStringParameters || {}
+
+    const path = event.path.replace(/^\//, "")
+    const url = `https://poiit.me/${path.replace('.jpeg', '')}`
+
+    let slsChrome = null;   
     let browser = null;
     let page = null;
 
@@ -34,8 +39,8 @@ exports.handler = async (event, context, callback) => {
         page = await browser.newPage();
 
         page.setViewport({
-            width: 1048,
-            height: 743
+            width: Number(w),
+            height: Number(h)
         })
         
         await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36')
