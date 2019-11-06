@@ -11,8 +11,8 @@ exports.handler = async (event, context, callback) => {
         mobile = false
       } = event.queryStringParameters || {}
 
-    const path = event.path.replace(/^\//, "")
-    const url = path.join(process.env.HOST, path.replace('.jpeg', ''))
+    const eventPath = event.path.replace(/^\//, "")
+    const url = path.join(process.env.HOST, eventPath.replace('.jpeg', ''))
 
     let slsChrome = null;   
     let browser = null;
