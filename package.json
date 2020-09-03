@@ -19,7 +19,7 @@
   "dependencies": {
     "@serverless-chrome/lambda": "^1.0.0-38",
     "chrome-remote-interface": "^0.25.5",
-    "puppeteer": "^1.10.0"
+    "puppeteer": "^1.13.0"
   },
   "devDependencies": {
     "chrome-launcher": "^0.10.5",
